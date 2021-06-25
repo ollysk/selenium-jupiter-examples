@@ -34,7 +34,7 @@ class SeleniumJupiterTest {
     @Options
     ChromeOptions chromeOptions = new ChromeOptions();
     {
-        chromeOptions.addArguments("--headl6ess","");
+        chromeOptions.addArguments("--headless","");
     }
 
     @Test
