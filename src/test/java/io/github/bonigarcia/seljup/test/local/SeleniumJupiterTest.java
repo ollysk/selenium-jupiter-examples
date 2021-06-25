@@ -18,16 +18,24 @@ package io.github.bonigarcia.seljup.test.local;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import io.github.bonigarcia.seljup.Options;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.seljup.SeleniumJupiter;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 @Tag("local")
 @ExtendWith(SeleniumJupiter.class)
 class SeleniumJupiterTest {
+
+    @Options
+    ChromeOptions chromeOptions = new ChromeOptions();
+    {
+        chromeOptions.addArguments("--headl6ess","");
+    }
 
     @Test
     void test(ChromeDriver driver) {
